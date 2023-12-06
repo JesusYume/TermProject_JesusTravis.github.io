@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Relativity Animations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css_folder/time_dilation.css">
+</head>
+<body onload="init()">
+    <div class="wrapper">
+        <div id="stars"></div>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="title.html">Title</a></li>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Animations</a>
+            <ul>
+              <li><a href="time_dilation.html">Time Dilation & Length Contraction</a></li>
+              <li><a href="doppler.html">Doppler Effect</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <h1 class="title">Time Dilation & Length Contraction</h1>
+    <div id="shipdiv">
+      <canvas id="shipcanvas" width="1000" height="200"></canvas>
+    </div>
+    <div class="inlinebox">
+      <h2 class="title">Clocks Onboard Ship (ns)</h2>
+      <div id="clockdiv">
+        <canvas id="clockcanvas" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="inlinebox">
+      <h2 class="title">Control Options</h2>
+      <button id="pause" onclick="togglePlay(this)" >Play</button>
+      <button id="reset" onclick="reset()" disabled="disabled">Reset</button>
+    </div>
+
+    <div class="inlinebox">
+      <h2>Choose a frame</h2>
+      <input type="radio" name="frame" id="jesusRB" onchange="changeFrame(this)" checked="checked"><span style="color:red">Jesus</span>
+      <input type = "radio" name="frame" id="travisRB" onchange="changeFrame(this)"><span style="color:#4030bf">Travis</span>
+
+      <h4 id="speed_text">Set velocities relative to Jesus (in terms of c)</h4>
+      <span style="color:red">Jesus</span>: <input type="number" id="jesus_speed" min="-0.99" max="0.99" step="0.01" value="0" disabled="disabled">
+      <span style="color:#4080bf">Travis</span>: <input type="number" id="travis_speed" min="-0.99" max="0.99" step="0.01" value="0">
+    
+      <h4>Set their spaceships' lengths (in meters)</h4>
+      <p>These are the ships' <i>proper</i> lengths</p>
+
+      <span style="color:red">Jesus</span>: <input type="number" id="jesus_len" min="1" max="1000" step="1" value="100">
+      <span style="color:#4080bf">Travis</span>: <input type="number" id="travis_len" min="1" max="1000" step="1" value="100">		
+      </div>
+</body>
+<script src="time_dilation.js"></script>
+</html>
