@@ -49,7 +49,7 @@ function togglePlay(button) {
 function calcDoppler() {
   speed += 1; // velocity 
   beta = speed/100; // lorentz transformation beta = v/c, lets say velocity = a percentage of speed of light so beta = percentage, beta = %c/c = %
-  if (v < 1) {
+  if (beta < 1) {
     // Towards us the velocity will be positive
     var recipWavelengthToward  = (1/580) * Math.sqrt((1-beta)/(1+beta)); // 1/580 is the wavelength of the color yellow
 
