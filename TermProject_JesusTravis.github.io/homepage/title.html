@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>General Relativity Animations</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css_folder/title_css.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div id="stars"></div>
+    </div>
+    <div class="box-area">
+        <div class="title-letters">
+            <h1> Jesus and Travis </h1>
+            <p> Quest </p>
+            <p> to </p>
+            <p> Understand </p>
+            <p> General Relativity </p>
+        </div>
+        <div class="title-button">
+            <p>Press Spacebar to Start</p>
+            <script>
+                document.body.addEventListener('keydown', function(e) {
+                    if (e.keyCode === 32) // key code for spacebar
+                        location="homepage.html"
+                })
+            </script>
+        </div>
+    </div>
+    <canvas id = "canvas1"></canvas>
+    <script type="text/javascript" src="Jesus_sprite.js"></script>
+    <script type="text/javascript" src="Spring_sprite.js"></script>
+</body>
+</html> 

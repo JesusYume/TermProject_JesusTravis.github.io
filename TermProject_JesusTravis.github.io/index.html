@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>General Relativity Animations</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Here we import fonts from google, giving us the 8-bit style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <!-- div is a way to say, this is a section of the webpage. -->
+    <div class="fade-in-text"> 
+        <p>Jesus and Travis Present</p> <!-- paragraph -->
+        <script>
+            // Script is a way to import JavaScript in HTML
+            // This listens for a button press, in this case we listen for a space button press
+            document.body.addEventListener('keydown', function(e) { 
+                if (e.keyCode === 32) // key code for spacebar
+                    location="homepage/title.html"
+            })
+        </script>
+    </div>
+</body>
+</html> 

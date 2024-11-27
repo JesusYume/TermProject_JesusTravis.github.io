@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Relativity Animations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css_folder/doppler.css">
+</head>
+<body onload="init()">
+    <div class="wrapper">
+        <div id="stars"></div>
+    </div>
+    <div>
+      <nav>
+        <ul>
+          <li><a href="title.html">Title</a></li>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Animations</a>
+            <ul>
+              <li><a href="time_dilation.html">Time Dilation & Length Contraction</a></li>
+              <li><a href="doppler.html">Doppler Effect</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <h1 class="title">Doppler Effect, Left Circle is moving away from us, Right Circle is moving towards us</h1>
+    <div id="circlediv">
+      <canvas id="circlecanvas" width="1000" height="200"></canvas>
+    </div>
+    <div class="inlinebox">
+      <h2 class="title">Speed of Circles (precent speed of light)</h2>
+      <div id="speeddiv">
+        <canvas id="speedcanvas" width="400" height="200"></canvas>
+      </div>
+    </div>
+    <div class="inlinebox">
+      <h2 class="title">Control Options</h2>
+      <button id="pause" onclick="togglePlay(this)" >Play</button>
+      <button id="reset" onclick="reset()" disabled="disabled">Reset</button>
+    </div>
+</body>
+<script src="doppler_effect.js"></script>
+</html>

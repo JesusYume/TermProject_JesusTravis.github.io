@@ -1,0 +1,50 @@
+/* Styling*/
+
+/* This sets margin, padding, and font style for everything on the page */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+/* This changes the color of the body of page. */
+body {
+    background-color: black;
+}
+
+/* This changes the style of paragraphs. known as p. */
+.fade-in-text p {
+    font-size: larger;
+    text-align: center;
+    margin: 0; /* Sets the Margin of the box to zero */
+    position: fixed; /* Sets the position of element as fixed, nothing else can affect this elements style. */
+    top: 50%;
+    left: 44%;
+    color: white;
+    z-index: 3; /* This tells what layer should this text be on */
+    
+    /* This calls on the FadeIn Animation */
+    animation: fadeIn 15s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    
+}
+/* The following below does the animation. */
+@keyframes fadeIn {
+    0% { opacity: 0; } /* Makes the letters clear */
+    100% { opacity: 1; } 
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* @keyframes move-twinkle {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+} */
