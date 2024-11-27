@@ -47,14 +47,14 @@ function togglePlay(button) {
 
 // Function for calculating the frequency doppler effect at relatevistic speeds
 function calcDoppler() {
-  speed += 1;
-  v = speed/100;
+  speed += 1; // velocity 
+  beta = speed/100; // lorentz transformation beta = v/c, lets say velocity = a percentage of speed of light so beta = percentage, beta = %c/c = %
   if (v < 1) {
     // Towards us the velocity will be positive
-    var recipWavelengthToward  = (1/580) * Math.sqrt((1-v)/(1+v));
+    var recipWavelengthToward  = (1/580) * Math.sqrt((1-beta)/(1+beta)); // 1/580 is the wavelength of the color yellow
 
     // Away from us the velocity will be negative
-    var recipWavelengthAway = (1/580) * Math.sqrt((1-(-1*v))/(1+(-1*v)));
+    var recipWavelengthAway = (1/580) * Math.sqrt((1-(-1*beta))/(1+(-1*beta)));
     
     // Return the recipracole of the answers to use to get the RGB values and Hexadecimal values
     return [1/recipWavelengthToward, 1/recipWavelengthAway];
